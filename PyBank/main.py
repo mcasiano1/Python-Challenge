@@ -38,6 +38,23 @@ m_format=mchange
 Formatted_m="{:.2f}".format(m_format)
 print(f"Average Change: ${Formatted_m}")
 
+#Greatest Increase In Profits (date & Amount) over the entire period
+p_increase=max(AvgChange)
+print(p_increase)
+j=AvgChange.index(p_increase)
+increase=months[j+1]
+
+print(f"Greatest Increase in Profits: {increase} (${p_increase})")
+
+#Greatest decrease in losses (date and amount) over the entire period
+p_decrease=min(AvgChange)
+print(p_decrease)
+k=AvgChange.index(p_decrease)
+decrease=months[k+1]
+
+print(f"Greatest Decrease in Profits: {decrease} (${p_decrease})")
+
+
 
 
 
