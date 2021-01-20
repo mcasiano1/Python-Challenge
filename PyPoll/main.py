@@ -2,8 +2,9 @@
 import os
 import csv
 
-votes[]
-candidates[]
+votes=[]
+candidates=[]
+
 
 # Set path for file
 csvpath = os.path.join(".", "Resources", "election_data.csv")
@@ -14,15 +15,15 @@ with open(csvpath,newline='') as csvfile:
     #seperate header
     header = next(csvreader)
 
-    #seperate header
-    header = next(csvreader)
-    # Loop through data and calc number of votes in ds
+# Loop through data and calc total number of votes in ds, similar to PyBank 
     for row in csvreader:
         votes.append(row[0])
-        candidates.append(row[1])  
-        TotalVotes=len(votes)
-        #Calc net total amt of Candidates     
-        NetTotal=NetTotal + int (row[1]) 
+        TotalVotes=len(votes)            
 
 print(f"Total Votes: {TotalVotes}")
-print(f"Total: ${NetTotal}")
+
+#Complete list of candidates who received votes
+candidates.append(row[2])
+
+
+
